@@ -1,0 +1,37 @@
+<html>
+    <head>
+	   <script>
+	      function abc(){
+		     alert("Working.....");
+		  }
+		  function pagereload(){
+		     alert("Working Page Reloaded")
+		  }
+	   </script>
+	</head>
+	<body onload="pagereload()">
+	   <center>
+	      <h1>JavaScript Mouse events Example</h1>
+		  <button onclick="abc()">1 Click</button>
+		  <button ondblclick="abc()">2 Click</button>
+		  <button onmousedown="abc()"> Left or Right click</button>
+		  <button onmousemove="abc()">Move Mouse Here</button>
+		  <button onmouseout="abc()">Touch and move out</button>
+		  
+		  On Change : <select onchange="abc()">
+		                      <option>Choose</option>
+		                      <option>Mumbai</option>
+		                      <option>Pune</option>
+		                      <option>Chennai</option>
+		                      <option>Bangalore</option>
+		              </select>
+					  
+		  <h1>Keyboard Events Example</h1>
+           <p>onKey Press : <input type="text" onkeypress="abc()"/> </p>
+		   <p>onKey up : <input type="text" onkeyup="abc()"/> </p>
+		   <p>onFocus : <input type="text" onfocus="abc()"/> </p>
+		   <p>onBlur : <input type="text" onblur="abc()"/> </p>
+          		  
+	   </center>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+Javascript
+ 
+  1. event in javascript
+     Mouse :
+	 a. onclick      - on single click
+	 b. ondblclick   - on double click
+	 c. onmousedown  - on left / right click
+	 d. onmousemove  - when the mouse moves 
+	 e. onmouseout   - when the mouse moves out
+	 f. onchange     - 
+	 
+	 Keyboard :
+	 a. onkeypress - event gets fired when the user keypress
+	 b. onkeyup    - event gets fired when the user leaves the key
+	 c. onfocus    - event gets fired when user clicks on the textbox
+	 d. onblur     - event gets fired when user enters keywords inside the textbox and leaves
+	 
+	 Form :
+	    a. onsubmit
+		
+	 Body:
+		a. onload
+		
+		(type of user interaction to ui is called as an event in javascript)
+		
+----------------------------------------------------------------		   
+  2. Type of popup window
+     a. alert   - it is used to give confirmation to user
+	 b. confirm - it is used to ask confirmation from user
+	 c. prompt  - it used to ask non boolean input from user
+-----------------------------------------------------------------	 
+	 
+  3. user defined javascript functions
+     
+   
+  
+  
+  
+  
+  
+  
