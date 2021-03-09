@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+              var data = "<h1> Hello by H1 </h1> <p> This is p </p>";
+              one = () =>{
+                  document.getElementById("msg").innerText = data;
+              }
+
+              two = () =>{
+                  document.getElementById("msg").innerHTML = data;
+              }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>HTML Output Element InnerText & InnerHtml Difference</h1>
+            <button onclick="one()">innerText</button>
+            <button onclick="two()">innerHTML</button>
+            <br/>
+            <br/>
+            <div id="msg"></div>
+        </center>
+    </body>
+</html>

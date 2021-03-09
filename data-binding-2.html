@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script>
+              one = () =>{
+                 var a = document.getElementById("fname").value;
+                 alert(a);
+              }
+
+              two = () =>{
+                   document.getElementById("fname").size=100;
+              }
+
+              three = () =>{
+                  document.getElementById("fname").maxLength=20;
+              }
+
+              four = () =>{
+                  document.getElementById("fname").style.border="10px solid red";
+              }
+              five = () =>{
+                  document.getElementById("fname").style.border="";
+              }
+        </script>
+    </head>
+    <body>
+        <h1>property Binding for input tag</h1>
+        <input type="text"
+               id="fname"
+               size="30"
+               maxlength="10"
+               placeholder="Enter Name"
+               value="Hello Test"/>
+                
+              
+                <br/><br/>
+               <button onclick="one()">Pick Value</button>
+               <button onclick="two()">Resize</button>
+               <button onclick="three()">Set Length</button>
+               <button onclick="four()">Apply Border</button>
+               <button onclick="five()">Remove Border</button>
+
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html><!--Document-->
+    <head><!--Element-->
+        <script>
+        
+           one = () =>{
+             document.getElementById("abc").type="text";
+           }
+
+           two = () =>{
+             document.getElementById("abc").type="password";
+           }
+
+           three = () =>{
+               var a = document.getElementById("abc").value;
+               alert(a);
+           }
+
+           four = () =>{
+               document.getElementById("abc").value = "Today is sunday";
+           }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>Simple Example of html data and property binding</h1>
+            <input type="password" id="abc"/>
+            <button onclick="one()">Show</button>
+            <button onclick="two()">Hide</button>
+            <button onclick="three()">Pick Value</button>
+            <button onclick="four()">Assign Value</button>
+        </center>
+    </body>
+</html>

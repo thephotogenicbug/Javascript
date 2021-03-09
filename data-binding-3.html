@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script>
+             one = () =>{
+                document.getElementById("mypic").src="1.jpg";
+             }
+
+             two = () =>   document.getElementById("mypic").src="2.jpg"
+
+             three = () => document.getElementById("mypic").src="3.jpg";
+
+             four = () =>  document.getElementById("mypic").src="4.jpg";
+             
+             five = () => document.getElementById("mypic").style.borderRadius="50%";
+
+             six  = () => {
+             document.getElementById("mypic").style.borderRadius="0px";
+
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>Property binding of image tag - output element</h1>
+            <button onclick="one()">Ramesh</button>
+            <button onclick="two()">Ganesh</button>
+            <button onclick="three()">Suresh</button>
+            <button onclick="four()">Alex</button>
+            <button onclick="five()">Circle</button>
+            <button onclick="six()">Square</button>
+            
+
+            <br/><br/>
+            <img src="1.jpg" height="300" width="450" id="mypic"/>
+        </center>
+    </body>
+</html>

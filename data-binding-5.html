@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+             
+              one = () =>{
+                 var a = document.getElementById("msg").innerText;
+                 alert(a);
+              }
+
+              two = () =>{
+                 var a = document.getElementById("msg").innerHTML;
+                 alert(a);
+              }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>HTML Output Element InnerText & InnerHtml Difference</h1>
+            <button onclick="one()">innerText</button>
+            <button onclick="two()">innerHTML</button>
+            <br/>
+            <br/>
+            <div id="msg">
+                without any tag
+                <b>i am in bold</b>
+                <i> i am in italic</i>
+                i am out of tag
+                <u>i am underline</u>
+            </div>
+        </center>
+    </body>
+</html>
