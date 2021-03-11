@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <style>
+             th, td{
+                 
+                 box-shadow:0px 1px 2px blue;
+                 text-align:center;
+             }
+         </style> 
+         <script>
+             var item = [
+                        {name:"Apple", price:200, qty:5},
+                        {name:"Mango", price:100, qty:15},    
+                        ];
+
+         getItem = () =>{
+             var data = "";
+             item.map((xitem , index)=>{
+
+                 data = data + "<tr>";
+                 data = data + "<td>" + index + "</td>";
+                 data = data + "<td>" + xitem.name + "</td>";
+                 data = data + "<td>" + xitem.price + "</td>";
+                 data = data + "<td>" + xitem.qty + "</td>";
+                 data = data + "<td> <button onclick='delitem("+index+")'>Delete</button> </td>";
+                 data = data + "</tr>";   
+             })
+             //alert(data);
+             document.getElementById("list").innerHTML=data;
+         }     
+
+         delitem = (index) =>{
+              
+             var status = confirm("Are You Sure ?") // User Confirmation
+             if(status==true){
+            // alert("ok it will delete");
+            item.splice(index, 1); // splice function is used to delete element (index , 1) to delete (index, 0) to add element in position
+            document.getElementById("message").innerText = "Item Deleted Successfully";
+            getItem(); // To Reload the List
+        }
+
+         }
+         
+         save = () =>{
+                var n = document.getElementById("newname").value;
+                var p = document.getElementById("newprice").value;
+                var q = document.getElementById("newqty").value;
+               // alert("ok");
+               var newitem = {name:n, price:p, qty:q};
+               item = item.concat(newitem);// to add new item in table
+               getItem();
+               // remove value from text box
+               document.getElementById("newname").value="";
+               document.getElementById("newprice").value="";
+               document.getElementById("newqty").value="";
+               document.getElementById("message").innerText = n + "Added Successfully";
+                
+         }
+
+             
+         </script>
+    </head>
+    <body onload="getItem()">
+        <table align="center" cellpadding="10">
+            <caption><h2>Add Item</h2></caption>
+            <tr>
+                <td>Name <br/> <input type="text" id="newname"/> </td>
+                <td>Price <br/> <input type="text" id="newprice"/> </td>
+                <td>Quantity <br/> <input type="text" id="newqty"/> </td>
+                <td> <button onclick="save()">Save</button> </td>
+            </tr>
+        </table>
+        <br/>
+        <p align="center" id="message"></p>
+        <table align="center" cellpadding="10" width="80%">
+          <thead>
+              <tr>
+                  <th>SL No</th>
+                  <th>Item Name</th>
+                  <th>Item Price</th>
+                  <th>Item Quantity</th>
+                  <th>Action</th>
+              </tr>
+            </thead>
+              <tbody id="list">
+       
+              </tbody>
+          
+        </table>
+    </body>
+</html>

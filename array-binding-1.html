@@ -1,0 +1,64 @@
+<html>
+    <head>
+         <script>
+
+             var item = ["Apple", 100, "Mouse", 200, "Banana", 40];
+             one = () =>{
+
+                 var data="";
+                 for(var i=0; i<item.length; i++){
+                     data = data + item[i] + "<br/>";
+                 }
+        
+               //alert(data);
+                 document.getElementById("list").innerHTML=data;
+             }
+
+             two = () =>{
+                 var data = "";
+                 item.map((xitem , index)=>{
+                      data = data + "<p>" + xitem + "</p>";
+                 })
+                 //alert(data);
+                 document.getElementById("list").innerHTML=data;
+             }
+
+             save = () =>{
+                 var name = document.getElementById("newitem").value;
+                 if(name !==""){
+                 item.push(name);
+                 two();//to reload the list
+                 document.getElementById("newitem").value="";
+                }
+             }
+         </script>  
+         <style>
+             p{
+                 float:left;
+                 width:29.33%;
+                 box-shadow:0px 1px 2px blue;
+                 text-align:center;
+                 margin:1%;
+                 padding:1%;
+             }
+             div{
+                 margin:30px;
+             }
+
+         </style>      
+    </head>
+    <body onload="two()">
+         <center>
+             <h2>Single Dimensional Array Data Binding Example </h2>
+             <button onclick="one()">Get Items</button>
+             <button onclick="two()">User Map() </button>
+            
+             <div>
+                 New item: <input type="text" id="newitem"/>
+                           <button onclick="save()">Save Item</button>
+             </div>
+
+             <div id="list"></div>
+         </center>
+    </body>
+</html>
