@@ -2,6 +2,11 @@
     <head>
         <script>
             save = () =>{
+             var mobile = document.getElementById("mobile").value;
+             var email = document.getElementById("email").value;
+
+             localStorage.setItem("mobile", mobile);
+             localStorage.setItem("email", email);
 
                 window.location.href="four.html";
             }
@@ -10,6 +15,18 @@
     <body>
         <center>
             <h1>Contact Information</h1>
+            <table cellpadding="15">
+                <tr>
+                    <th>Mobile</th>
+                    <td><input type="text" id="mobile"/></td>
+                </tr>
+    
+                <tr>
+                    <th>Email ID</th>
+                    <td><input type="text" id="email"/></td>
+                </tr>
+    
+                </table>
             <button onclick="save()">Save & Continue</button>
         </center>
     </body>

@@ -2,6 +2,13 @@
     <head>
         <script>
             save = () =>{
+                var sslc = document.getElementById("sslc").value;
+                var puc = document.getElementById("puc").value;
+                var grad = document.getElementById("grad").value;
+
+                localStorage.setItem("sslc", sslc);
+                localStorage.setItem("puc", puc);
+                localStorage.setItem("grad", grad);
 
                 window.location.href="three.html";
             }
@@ -10,7 +17,22 @@
     <body>
         <center>
             <h1>Education Information</h1>
-            
+            <table cellpadding="15">
+                <tr>
+                    <th>SSLC</th>
+                    <td><input type="text" id="sslc"/></td>
+                </tr>
+    
+                <tr>
+                    <th>PUC</th>
+                    <td><input type="text" id="puc"/></td>
+                </tr>
+    
+                <tr>
+                    <th>Graduation</th>
+                    <td><input type="text" id="grad"/></td>
+                </tr>
+                </table>
             <button onclick="save()">Save & Continue</button>
         </center>
     </body>

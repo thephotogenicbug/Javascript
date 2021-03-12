@@ -1,10 +1,32 @@
 <html>
     <head>
         <script>
+            getItem = () =>{
+           
+              var n = localStorage.getItem("fullname");
+              var a = localStorage.getItem("age");
+              var g = localStorage.getItem("gender");
+              var s = localStorage.getItem("sslc");
+              var p = localStorage.getItem("puc");
+              var gr = localStorage.getItem("grad");
+              var m = localStorage.getItem("mobile");
+              var e = localStorage.getItem("email");
+
+              var mydata = "<p> Full Name : " + n + "</p>";
+              mydata += "<p> Age : " + a + "</p>";
+              mydata += "<p> Gender :" + g +"</P>";
+              mydata += "<p> SSLC : "  + s +"</p>";
+              mydata += "<p> PUC : "  + p + "</p>";
+              mydata +="<p> Graduation: " + gr +"</p>";
+              mydata += "<p> Mobile No. :" + m + "</p>";
+              mydata += "<p> Email ID :" + e + "</p>"; 
+              document.getElementById("mydata").innerHTML =mydata;  
+
+            }
            
         </script>
     </head>
-    <body>
+    <body onload="getItem()">
         <center>
             <h1>My Full Information</h1>
             
