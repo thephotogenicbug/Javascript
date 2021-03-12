@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script>
+            getItem = () =>{
+            
+            var n = localStorage.getItem("fullname");
+            var m = localStorage.getItem("mobile");
+            var c = localStorage.getItem("city");
+            var p = localStorage.getItem("pincode");
+
+            var mydata = "<p> Full NAME : " + n + "</p>";
+            mydata += "<p> Mobile No : " + m + "</p>";
+            mydata += "<p> City : " + c + "</p>";
+            mydata += "<p> PindCode : " + p + "</p>";
+            document.getElementById("data").innerHTML = mydata;
+
+        }
+
+        cleardata = () =>{
+            localStorage.clear();
+            window.location.reload();// Reload current page.
+        }
+        </script>
+    </head>
+    <body onload="getItem()">
+        <center>
+               <h1>Sample Data From Local Storage</h1>
+              
+               <div id="data"></div>
+
+               <hr color="blue" size="2"/>
+               <a href="local-1.html">Go Back</a>
+               <br/><br/>
+               <button onclick="cleardata()">Clear All</button>
+         </center>
+    </body>
+</html>

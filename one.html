@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+            save = () =>{
+                var name = document.getElementById("fname").value;
+                var age = document.getElementById("age").value;
+                var gender = document.getElementById("gender").value;
+
+                localStorage.setItem("name", name);
+                localStorage.setItem("age", age);
+                localStorage.setItem("gender", gender);
+                
+                window.location.href="two.html";
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>Basic Information</h1>
+            <table cellpadding="15">
+            <tr>
+                <th>Full Name</th>
+                <td><input type="text" id="fname"</td>
+            </tr>
+
+            <tr>
+                <th>Age</th>
+                <td><input type="text" id="age"</td>
+            </tr>
+
+            <tr>
+                <th>Gender</th>
+                <td><input type="text" id="gender"</td>
+            </tr>
+            </table>
+            <button onclick="save()">Save & Continue</button>
+        </center>
+    </body>
+</html>

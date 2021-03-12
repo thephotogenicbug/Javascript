@@ -33,6 +33,7 @@ Javascript
   3. user defined javascript functions
   4. Data Binding (sending value from html to js, js to html)
      a. for input element
+-----------------------------------------------------------------	 
 	 
    
   

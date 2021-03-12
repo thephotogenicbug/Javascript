@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+            one = () =>{
+                var name = document.getElementById("fname").value;
+                var mobile = document.getElementById("mobile").value;
+                var city = document.getElementById("city").value;
+                var pincode = document.getElementById("pincode").value;
+
+                localStorage.setItem("fullname", name);
+                localStorage.setItem("mobile", mobile);
+                localStorage.setItem("city", city);
+                localStorage.setItem("pincode", pincode);
+                alert("local storage created");
+                window.location.href="local-2.html";// to connect next html file.
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>HTML 5 Web Storage</h1>
+            <p>Enter Name: <input type="text" id="fname"/> </p>
+            <p>Enter Mobile No: <input type="text" id="mobile"/> </p>
+            <p>Enter City: <input type="text" id="city"/> </p>
+            <p>Enter PinCode: <input type="text" id="pincode"/> </p>
+            <button onclick="one()">Create LocalStorage</button>
+
+            <p>Local Storage</p>
+            <p>Session Storage</p>
+            <h3>Local Storage</h3>
+            <p>
+                LocalStorage is used to store data in browser memory upto 10mb<br/>
+                localStorage.setItem(); used to store the data<br/>
+                localstorage.getItem(); used to fetch the data<br/>
+                localstorage.clear(); use to clear all the data from localstorage<br/>
+            </p>
+            <p>localStorage works like permanent cookie</p>
+            <p>localStorage is Browser independent</p>
+            <p>It store all data in browser history, so it is unsecure</p>
+        </center>
+    </body>
+</html>
