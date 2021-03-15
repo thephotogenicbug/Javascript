@@ -1,0 +1,38 @@
+<html>
+    <head>
+     <script>
+         one = () =>{
+             var pname = document.getElementById("pname").value;
+             var price = document.getElementById("price").value;
+             var qty = document.getElementById("qty").value;
+             var total = price * qty;
+             var data = "<h1> Purchase Details</h1>";
+             data = data + "<p> Product Name : "+pname+"</p>";
+             data = data + "<p> Product Price :"+price+"</p>";
+             data = data + "<p> Product Qty :" +qty+"</P>";
+             data = data + "<p> Total Price : " +total+"</p>";
+             document.getElementById("data").innerHTML = data;
+
+         }
+     </script>
+    </head>
+    <body>
+        <center>
+            <h2>Product Price Calculation</h2>
+            <p>Product Name: <input type="text" id="pname"/> </p>
+            <p>Product Price: <input type="number" id="price"/> </p>
+            <p>Product Quantity:
+               <select id="qty" onchange="one()">
+                     <option value="0">Choose</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+               </select>    
+            </p>
+            <div id="data"></div>
+        </center>
+    </body>
+</html>

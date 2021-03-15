@@ -1,0 +1,34 @@
+<html>
+    <head>
+       <script>
+           one = (text) =>{
+               document.getElementById("message").innerText = text;
+
+              var total="";
+              total=text.length;
+               document.getElementById("total").innerText = total;
+          
+
+           if(text.length>80 && text.length<90) {
+           document.getElementById("message").style.color ="orange";
+
+        }else if(text.length>90){
+            document.getElementById("message").style.color = "red";
+
+        }else{
+            document.getElementById("message").style.color = "green";
+        }
+
+    }// 
+       </script>
+    </head>
+    <body>
+        <center>
+            <h2>Find Length of user input by javascript</h2>
+            <textarea rows="5" cols="40" maxlength="100" onkeyup="one(this.value)"></textarea>
+
+            <p id="total"></p>
+            <p id="message"></p>
+        </center>
+    </body>
+</html>
